@@ -1,15 +1,15 @@
 package es.viajeseci.paas.poc;
 
+import es.viajeseci.paas.poc.resources.SayHelloResource;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.java8.Java8Bundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-public class RestSimpleApplication extends Application<Configuration> {
-
-  public static void main(String... args) throws Exception {
-    new RestSimpleApplication().run(args);
+public class HelloWorldApplication extends Application<Configuration> {
+  public static void main(String...args) throws Exception {
+    new HelloWorldApplication().run(args);
   }
 
   @Override

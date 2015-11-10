@@ -29,7 +29,7 @@
   </dependencies>
 
   <build>
-    <finalName>${artifactId}</finalName>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -58,7 +58,7 @@
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>es.viajeseci.paas.poc.RestSimpleApplication</mainClass>
+                  <mainClass>es.viajeseci.paas.poc.HelloWorldApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -84,8 +84,8 @@
         <configuration>
           <baseImage>java:8</baseImage>
           <maintainer>Viajes el Corte ingles</maintainer>
-          <imageName>${artifactId}</imageName>
-          <entryPoint>["java", "-jar", "/${artifactId}.jar", "server"]</entryPoint>
+          <imageName>${project.artifactId}</imageName>
+          <entryPoint>["java", "-jar", "/${project.artifactId}.jar", "server"]</entryPoint>
           <resources>
             <resource>
               <targetPath>/</targetPath>

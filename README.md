@@ -25,7 +25,7 @@ Ejemplo de una aplicación sencilla construida con Dropwizard.
 La aplicación expone dos endpoints:
 
  - [http://localhost:<port>/hi[?name=a_name]](http://localhost:8080/hi?name=a_name): Devuelve el 
-   siguiente contenido (como text/plain): **hello <unknown>**. El puerto, por defecto es 8080.
+   siguiente contenido (como text/plain): **Hello Unknown**. El puerto, por defecto es 8080.
 
 
 ##  Docker
