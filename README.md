@@ -18,14 +18,14 @@ Ejemplo de una aplicación sencilla construida con Dropwizard.
 
 ### Arranque de la aplicación
 
-    ${project_home}/java -jar target/rest-simple-0.1.0-SNAPSHOT.jar server
+    ${project_home}/java -jar target/helloworld.jar server
 
 ### Acceso a la aplicación
 
 La aplicación expone dos endpoints:
 
- - [http://localhost:<port>/hi[?name=a_name]](http://localhost:8080/hi?name=a_name): Devuelve un JSON 
-   como el siguiente: **{"name":"a_name"}**. El puerto, por defecto es 8080.
+ - [http://localhost:<port>/hi[?name=a_name]](http://localhost:8080/hi?name=a_name): Devuelve el 
+   siguiente contenido (como text/plain): **hello <unknown>**. El puerto, por defecto es 8080.
 
 
 ##  Docker
@@ -40,4 +40,5 @@ permisos de super usuario).
 
 ### Ejecución del docker
 
-    docker run [--rm] [-ti] -p 8080:8080 dropwizardsample
+    docker run [--rm] [-ti] [-p 8080:8080] helloworld
+

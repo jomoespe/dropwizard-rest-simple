@@ -1,4 +1,4 @@
-package com.josemorenoesteban.lab.dropwizard.rest.simple;
+package es.viajeseci.paas.poc;
 
 import java.util.Optional;
 import java.util.concurrent.Executor;
