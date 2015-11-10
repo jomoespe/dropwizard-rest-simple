@@ -13,16 +13,15 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/hi")
 public class SayHelloResource {
-  private static final String RESPONSE_TEXT = "Hello %s\n";
-  private static final String DEFAULT_NAME  = "Unknown";
-  
-  private final Executor executor = Executors.newCachedThreadPool();
+  private static final String   RESPONSE_TEXT = "Hello %s\n";
+  private static final String   DEFAULT_NAME  = "Unknown";
+  private static final Executor EXECUTOR      = Executors.newCachedThreadPool();
   
   @GET
   @Produces(MediaType.TEXT_PLAIN)
   public void sayHello(@Suspended final AsyncResponse asyncResponse,
                        @QueryParam("name") final Optional<String> name) {
-    executor.execute(() -> {
+    EXECUTOR.execute(() -> {
       asyncResponse.resume(String.format(RESPONSE_TEXT, name.orElse(DEFAULT_NAME)));
     });    
   }
