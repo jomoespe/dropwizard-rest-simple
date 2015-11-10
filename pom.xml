@@ -84,7 +84,7 @@
         <configuration>
           <baseImage>java:8</baseImage>
           <maintainer>Viajes el Corte ingles</maintainer>
-          <imageName>${project.artifactId}</imageName>
+          <imageName>jomoespe/${project.artifactId}</imageName>
           <entryPoint>["java", "-jar", "/${project.artifactId}.jar", "server"]</entryPoint>
           <resources>
             <resource>
