@@ -1,4 +1,4 @@
-# Dropwizard REST simple
+# Hello World REST simple
 
 Ejemplo de una aplicación sencilla construida con Dropwizard. 
 
